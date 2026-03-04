@@ -1,4 +1,4 @@
-import "./Title.css";
+import "./WayPointTitle.css";
 
 export default function Title() {
   return <h1 className="title">WayPoint</h1>;

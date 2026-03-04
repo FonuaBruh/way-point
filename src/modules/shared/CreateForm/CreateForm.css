@@ -1,0 +1,48 @@
+.form {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 15px 25px;
+  margin-top: 15px;
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 45px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 400px;
+}
+
+.form-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.submit-button {
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 45px;
+  color: black;
+  padding: 10px 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+h2 {
+  padding-bottom: 15px;
+  font-size: 1.8rem;
+}

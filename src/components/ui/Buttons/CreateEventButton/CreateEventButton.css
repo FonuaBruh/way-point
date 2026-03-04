@@ -1,0 +1,10 @@
+.create-event-button {
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 45px;
+  color: black;
+  padding: 10px 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
