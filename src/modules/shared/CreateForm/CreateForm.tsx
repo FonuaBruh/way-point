@@ -8,9 +8,18 @@ import {
   createEventFormProps,
   createShoppingListFormProps,
 } from "./formTemplates";
+import HomePageButton from "../../../components/ui/buttons/HomePageButton/HomePageButton";
 
 export default function CreateForm(props: FormData) {
   let currentFormProps: FormInputProps[] | null = null;
+
+  function createEvent() {
+    console.log("Ивент создан!");
+  }
+
+  function declineCreation() {
+    console.log("Создание отменено.");
+  }
 
   if (props.formType === "createEvent") {
     currentFormProps = createEventFormProps;
@@ -28,7 +37,10 @@ export default function CreateForm(props: FormData) {
             <FormInput {...inputProps} />
           </div>
         ))}
-      <input type="submit" value="Создать" className="submit-button" />
+      <div className="form-btns">
+        <HomePageButton onClick={createEvent} text="Создать" />
+        <HomePageButton onClick={declineCreation} text="Отмена" />
+      </div>
     </form>
   );
 }

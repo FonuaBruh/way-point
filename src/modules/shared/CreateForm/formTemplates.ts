@@ -4,20 +4,20 @@ export const createEventFormProps: FormInputProps[] = [
   {
     name: "eventName",
     type: "text",
-    placeholder: "День рождения",
-    label: "Название ивента",
+    placeholder: "Корпоратив в пентхаусе",
+    label: "Придумай название",
   },
   {
     name: "eventDate",
     type: "date",
     placeholder: "10.10.2024",
-    label: "Дата ивента",
+    label: "Укажи дату проведения",
   },
   {
     name: "eventLocation",
     type: "text",
-    placeholder: "Место проведения",
-    label: "Место проведения",
+    placeholder: "Название места, города и тд.",
+    label: "Где будет проходить ивент?",
   },
 ];
 
