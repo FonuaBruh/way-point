@@ -2,6 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 2px solid black;
+  border-top: 2px solid #3f3f3f;
   padding: 15px 0;
 }

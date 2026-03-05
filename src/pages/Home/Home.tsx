@@ -4,9 +4,11 @@ import WayPointDesc from "../../components/ui/text/WayPointDesc/WayPointDesc";
 import Header from "../../layout/Header/Header";
 import MainContent from "../../layout/MainContent/MainContent";
 import Title from "../../components/ui/text/WayPointTitle/WayPointTitle";
-import "./Home.css";
 import CreateEventButton from "../../components/ui/buttons/CreateEventButton/CreateEventButton";
 import CreateForm from "../../modules/shared/CreateForm/CreateForm";
+import { TEXTDATA } from "./textData";
+
+import "./Home.css";
 
 export default function Home() {
   return (
@@ -19,13 +21,16 @@ export default function Home() {
         <WayPointDesc />
       </Header>
       <MainContent>
-        <CreateEventButton text="Создать ивент" />
-        <CreateForm formType="createEvent" title="Создать ивент" />
+        <CreateEventButton text={TEXTDATA.createEventBtn} />
+        <CreateForm
+          formType="createEvent"
+          title={TEXTDATA.createEventFormTitle}
+        />
         <CreateForm
           formType="createShoppingList"
-          title="Создать список покупок"
+          title={TEXTDATA.createShoppingListFormTitle}
         />
-        <Heading text="Созданные ивенты" />
+        <Heading text={TEXTDATA.createdEventsHeading} />
       </MainContent>
     </>
   );

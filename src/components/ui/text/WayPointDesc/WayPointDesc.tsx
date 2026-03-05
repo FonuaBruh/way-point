@@ -1,5 +1,7 @@
 import "./WayPointDesc.css";
 
 export default function WayPointDesc() {
-  return <h2>Сервис для планирования отдыха и событий</h2>;
+  return (
+    <h2 className="way-point-desc">Сервис для планирования отдыха и событий</h2>
+  );
 }
