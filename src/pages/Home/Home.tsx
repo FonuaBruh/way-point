@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import WayPointIcon from "../../components/ui/icons/WayPointIcon/WayPointIcon";
 import Paragraph from "../../components/ui/text/Paragraph/Paragraph";
 import Header from "../../layout/Header/Header";
@@ -16,38 +18,74 @@ export default function Home() {
   return (
     <>
       <Header>
-        <div className="top-row">
-          <WayPointIcon />
-          <Title />
-        </div>
-        <Paragraph text={TEXTDATA.wayPointHeaderDesc} />
+        <motion.div
+          initial={{ opacity: 0, x: 400 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <div className="top-row">
+            <WayPointIcon />
+            <Title />
+          </div>
+        </motion.div>
       </Header>
       <MainContent>
         {isEventFormOpen && (
-          <div className="create-event-section">
-            <CreateForm
-              formType="createEvent"
-              title={TEXTDATA.createEventFormTitle}
-            />
-          </div>
+          <motion.div
+            className="create-event-section-wrapper"
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            animate={{ opacity: 1, y: 20 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="create-event-section">
+              <CreateForm
+                formType="createEvent"
+                title={TEXTDATA.createEventFormTitle}
+              />
+            </div>
+          </motion.div>
         )}
         {!isEventFormOpen && (
           <div className="welcome-section">
-            <Paragraph text={TEXTDATA.wayPointDesc} />
-            <div className="createBtnWrapper">
-              <Paragraph text={TEXTDATA.arrowToCreateEventBtn} />
-              <HomePageButton
-                onClick={() => setIsEventFormOpen(true)}
-                text={TEXTDATA.createEventBtn}
-              />
-            </div>
-            <div className="createBtnWrapper reverse">
-              <Paragraph text={TEXTDATA.arrowToPrevEventsListBtn} />
-              <HomePageButton
-                onClick={() => setIsEventFormOpen(false)}
-                text={TEXTDATA.prevEventsListBtn}
-              />
-            </div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: -200,
+              }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <Paragraph text={TEXTDATA.wayPointDesc} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -500 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="createBtnWrapper">
+                <Paragraph text={TEXTDATA.arrowToCreateEventBtn} />
+                <HomePageButton
+                  onClick={() => setIsEventFormOpen(true)}
+                  text={TEXTDATA.createEventBtn}
+                />
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 300 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="createBtnWrapper reverse">
+                <Paragraph text={TEXTDATA.arrowToPrevEventsListBtn} />
+                <HomePageButton
+                  onClick={() => setIsEventFormOpen(false)}
+                  text={TEXTDATA.prevEventsListBtn}
+                />
+              </div>
+            </motion.div>
           </div>
         )}
       </MainContent>

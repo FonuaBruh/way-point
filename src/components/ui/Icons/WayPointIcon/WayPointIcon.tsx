@@ -1,9 +1,9 @@
 export default function WayPointIcon() {
   return (
     <svg
-      fill="#f5f5f5"
-      height="200px"
-      width="200px"
+      fill="#333333"
+      height="150px"
+      width="150px"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
